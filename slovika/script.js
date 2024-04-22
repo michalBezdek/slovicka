@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('card-form');
+    const form = document.querySelector('.form');
     const cardContainer = document.getElementById('card-container');
-
 
     loadCards();
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-        const englishWord = document.getElementById('english-word').value;
-        const czechTranslation = document.getElementById('czech-translation').value;
-        const explanation = document.getElementById('explanation').value;
+        const englishWord = document.getElementById('name').value;
+        const czechTranslation = document.getElementById('email').value;
+        const explanation = document.querySelector('textarea').value;
         const card = { englishWord, czechTranslation, explanation };
         saveCard(card);
         form.reset();
