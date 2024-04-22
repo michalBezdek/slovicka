@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vytvoření Kartiček</title>
+   <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <form id="card-form">
+        <label for="english-word">Anglické slovo:</label>
+        <input type="text" id="english-word" required>
+
+        <label for="czech-translation">Český překlad:</label>
+        <input type="text" id="czech-translation" required>
+
+        <label for="explanation">Vysvětlení:</label>
+        <textarea id="explanation" rows="5"  required></textarea>
+
+        <button type="submit" class="btn" id="lol">Přidat</button>
+    </form>
+
+    <div id="card-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

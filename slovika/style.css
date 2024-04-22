@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    animation: changeColorInput 6s linear infinite, transform 0.5s; 
+}
+
+button{
+    animation: clr 5s ease infinite;
+}
+@keyframes clr{
+    0% { background-color: #cc9b9b; }
+    16.67% { background-color: #d8bb85; }
+    33.33% { background-color: #c26a5b; }
+    50% { background-color: #439fc0; }
+    66.67% { background-color: rgb(117, 25, 89); }
+    83.33% { background-color: #a559ec; }
+    100% { background-color: #de1e1e; }
+
+}
+
+
+
+@keyframes changeColorInput {
+    0% { background-color: #5d1e1e; }
+    16.67% { background-color: #695023; }
+    33.33% { background-color: #4c1b12; }
+    50% { background-color: #16495b; }
+    66.67% { background-color: #3f0c30; }
+    83.33% { background-color: #40126b; }
+    100% { background-color: #7187c4; }
+}
+
+#card-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    transition: transform 0.5s, background-color 1.5s;
+    animation: changeColor 6s linear infinite, transform 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+
+
+.card .back {
+
+    display: none;
+}
+
+.card.active .front {
+    display: none;
+}
+
+.card.active .back {
+    display: block;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes changeColor {
+    0% { background-color: #FFD700; }
+    16.67% { background-color: #FFA500; }
+    33.33% { background-color: #FF6347; }
+    50% { background-color: #FF0000; }
+    66.67% { background-color: #8B0000; }
+    83.33% { background-color: #8A2BE2; }
+    100% { background-color: #2E64FE; }
+}
