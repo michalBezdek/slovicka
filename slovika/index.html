@@ -4,25 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vytvoření Kartiček</title>
-   <link rel="stylesheet" href="style.css">
-   
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="card-form">
-        <label for="english-word">Anglické slovo:</label>
-        <input type="text" id="english-word" required>
 
-        <label for="czech-translation">Český překlad:</label>
-        <input type="text" id="czech-translation" required>
-
-        <label for="explanation">Vysvětlení:</label>
-        <textarea id="explanation" rows="5"  required></textarea>
-
-        <button type="submit" class="btn" id="lol">Přidat</button>
+<div class="form-container">
+    <form class="form">
+      <div class="input-group">
+        <label class="label" for="name">Anglický název:</label>
+        <input class="input-field"  id="name">
+      </div>
+      <div class="input-group">
+        <label class="label" for="email">Český název:</label>
+        <input class="input-field"  id="email" name="email">
+      </div>
+      <textarea class="input-field" name="popis" id="" cols="30" rows="10" placeholder="Popis"></textarea>
+      <button class="submit-btn" type="submit">Odeslat</button>
     </form>
-
-    <div id="card-container"></div>
-
-    <script src="script.js"></script>
+  </div>
+  
+  <div id="card-container">
+    <div class="card">
+      <div class="front">
+        Přední strana
+      </div>
+      <div class="back">
+        Zadní strana
+        <button class="delete-btn">Smazat</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="front">
+        Přední strana
+      </div>
+      <div class="back">
+        Zadní strana
+        <button class="delete-btn">Smazat</button>
+      </div>
+    </div>
+  </div>
+<script src="script.js"></script>
 </body>
 </html>
